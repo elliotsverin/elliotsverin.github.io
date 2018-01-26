@@ -59,7 +59,7 @@ console.log(tl + " what " + anim);
         anim.goToAndStop(Math.round(this.target.frame), true)
       },
       ease: Linear.easeNone
-    });*/
+    });
 //}
 document.addEventListener("DOMContentLoaded", function(event) {
   //var scene = document.getElementsByClassName('rocket');
