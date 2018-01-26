@@ -34,7 +34,9 @@ h1{
 }
 @media (min-width: 521px) {
  .rocket{
-   width: 50%;
+   width: 20%;
+   top: 20%;
+   right: 20%;
  }
  .footer_li a{
 
@@ -48,7 +50,7 @@ h1{
       flex-wrap: wrap;
       flex-direction: row;
       color: white;
-      
+
       margin: 0;
       position: relative;
       padding: 10px;
