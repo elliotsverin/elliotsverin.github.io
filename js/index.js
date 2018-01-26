@@ -2,7 +2,7 @@ var tl = new TimelineMax();
 
 document.addEventListener("DOMContentLoaded", function(event){
   tl.from(("body"), 3, {backgroundColor: "#000000", ease: Power1.easeOut})
-  .from((".rocket"), 2, {autoAlpha: 0});
+  .from((".rocket"), 2, {autoAlpha: 0, x: "-500", y: "500", left: "40%"});
   var animation = bodymovin.loadAnimation({
     container: document.getElementById('bm'),
     renderer: "svg",
