@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>🚀ELLIOT_SVERIN🚀 - Creative Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Rubik" rel="stylesheet">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -12,10 +13,10 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#2131d8">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body id="body">
+  <body id="body" onmousemove="coordinates (event);">
 <!--    <h1>ELLIOT SVERIN 🚀</h1> -->
 <div class="rocket">
-  <img src="js/svg/rocket.svg" alt="rocket">
+  <img src="js/svg/rocket.svg" id="rocket"  data-depth="0.2" alt="rocket">
 </div>
     <div id="bm">
 
@@ -27,6 +28,7 @@
     </ul>
     </footer>
     <script src="js/lottie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="js/index.js"></script>
   </body>
