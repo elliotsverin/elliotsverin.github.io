@@ -1,6 +1,8 @@
 body{
   background-color: #2131D8;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 h1{
   color: white;
@@ -33,4 +35,28 @@ h1{
 @media (min-width: 521px) {
  .rocket{
    width: 50%;
+ }
+ .footer_li a{
+
+  text-decoration: none;
+  color: white
+  font-family: "Roboto", sans-serif;
+ }
+
+ .footer_li {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      color: white;
+      
+      margin: 0;
+      position: relative;
+      padding: 10px;
+ }
+ footer {
+   position: absolute;
+   bottom: 1em;
+   margin: 0;
+   padding: 0;
+   width: 100vw;
  }
