@@ -1,5 +1,8 @@
+var tl = new TimelineMax();
+
 document.addEventListener("DOMContentLoaded", function(event){
-  TweenMax.from((".rocket"), 2, {autoAlpha: 0});
+  tl.from(("body"), 3, {backgroundColor: "#000000", ease: Power1.easeOut})
+  .from((".rocket"), 2, {autoAlpha: 0});
   var animation = bodymovin.loadAnimation({
     container: document.getElementById('bm'),
     renderer: "svg",
