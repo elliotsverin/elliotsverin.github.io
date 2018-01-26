@@ -31,6 +31,9 @@ h1{
  .rocket{
    width: 100%;
  }
+ a{
+   font-size: 10vh;
+ }
 }
 @media (min-width: 521px) {
  .rocket{
@@ -43,6 +46,8 @@ h1{
 
   text-decoration: none;
   color: white;
+  font-size: 16px;
+  line-height: 1.2em;
   font-family: "Roboto", sans-serif;
  }
 
