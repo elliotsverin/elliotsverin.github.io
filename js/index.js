@@ -51,7 +51,8 @@ function onDOMLoaded(e) {
     }, 6.01, {
       frame: anim.totalFrames - 1,
       onUpdate: function() {
-        anim.goToAndStop(Math.round(this.target.frame), true)
+        console.log("yehaw");
+        anim.goToAndStop(Math.round(this.target.frame), true);
       },
       ease: Linear.easeNone
     });
