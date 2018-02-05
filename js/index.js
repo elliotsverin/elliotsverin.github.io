@@ -13,7 +13,21 @@ var height = window.innerHeight ||
 //function onDOMLoaded(e) {
 
  console.log("WEMADEIT");
+ var anim = bodymovin.loadAnimation({
+   container: document.getElementById('bm'),
+   renderer: "svg",
+   loop: true,
+   autoplay: true,
+   path: "./aboutloop.json"
+ });
 
+/*var aboutAnim = bodymovin.loadAnimation({
+  container = document.getElementById('aboutbm'),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "./aboutloop.json"
+});*/
 
 //}
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -72,14 +86,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //var parallaxInstance = new Parallax(scene);
 
 
-  console.log(anim.totalFrames);
-  var animation = bodymovin.loadAnimation({
-    container: document.getElementById('bm'),
-    renderer: "svg",
-    loop: false,
-    autoplay: true,
-    path: "data.json"
-  });
+//  console.log(anim.totalFrames);
+
 });
 
 

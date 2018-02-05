@@ -70,3 +70,22 @@ h1{
    padding: 0;
    width: 100vw;
  }
+ #main{
+   display: none;
+ }
+ #about{
+   position: absolute;
+   height: 100vh;
+   width: 100vw;
+
+ }
+ #aboutbm {
+   position: absolute;
+     margin: auto;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     width: 50vh;
+     height: 50vw;
+ }
