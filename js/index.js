@@ -14,7 +14,7 @@ var height = window.innerHeight ||
 
  console.log("WEMADEIT");
  var anim = bodymovin.loadAnimation({
-   container: document.getElementById('bm'),
+   container: document.getElementById('aboutbm'),
    renderer: "svg",
    loop: true,
    autoplay: true,
@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       y: "500",
       left: "40%"
     })
+    .fromTo(("#about"), 0.1, {autoAlpha:0}, {autoAlpha:0})
      .staggerFrom((".footer_li"), 0.5, {
        x: "-50",
        backgroundColor: "black",
@@ -110,6 +111,7 @@ function about() {
     y: -height / 1.8,
     autoAlpha: 0
   });
+  TweenMax.to(("#about"), 1, {autoAlpha:1});
 };
 
 

@@ -52,6 +52,12 @@ h1{
   line-height: 1.2em;
   font-family: "Roboto", sans-serif;
  }
+ p {
+   color: white;
+   font-size: 16px;
+   line-height: 1.2em;
+   font-family: "Roboto", sans-serif;
+ }
 
  .footer_li {
       display: flex;
@@ -70,23 +76,42 @@ h1{
    padding: 0;
    width: 100vw;
  }
-/* #main{
+/*#main{
    display: none;
- }
+ }*/
  #about{
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  display: hidden;
    position: absolute;
-   height: 100vh;
-   width: 100vw;
+   height: 80vh;
+   width: 80vw;
+   background-color: rgba(35, 35, 35, 0.6);
 
  }
- /*#aboutbm {
-   position: absolute;
-     margin: auto;
+
+#about ul li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+   margin 0;
+   position: relative;
+   margin: 10px;
+   /*background-color: red;*/
+   max-width: 50%;
+}
+
+#about #aboutbm {
+  position: fixed;
+
+     left: 35%;
      top: 0;
      right: 0;
      bottom: 0;
-     left: 0;
-     width: 50vh;
-     height: 50vw;
+
+     width: 70%;
+     height: 90%;
  }
-*/
