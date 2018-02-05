@@ -70,7 +70,7 @@ h1{
    padding: 0;
    width: 100vw;
  }
- #main{
+/* #main{
    display: none;
  }
  #about{
@@ -79,7 +79,7 @@ h1{
    width: 100vw;
 
  }
- #aboutbm {
+ /*#aboutbm {
    position: absolute;
      margin: auto;
      top: 0;
@@ -89,3 +89,4 @@ h1{
      width: 50vh;
      height: 50vw;
  }
+*/
