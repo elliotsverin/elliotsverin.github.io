@@ -100,7 +100,9 @@ function rollover(){
 }
 
 document.getElementById("aboutMe").addEventListener("click", about);
-
+document.ontouchmove = function (e) {
+  e.preventDefault();
+}
 function about() {
     console.log(home + " HEJ");
     width = window.innerWidth ||
@@ -127,7 +129,7 @@ function about() {
       document.getElementById("aboutMe").innerHTML="ABOUT";
       //document.getElementsByClassName("rocket").style.transform = "matrix(1, 0, 0, 1, -500, 500)";
       TweenMax.to(("#about"), 1, {autoAlpha:0});
-      
+
       home = true;
     }
 };
