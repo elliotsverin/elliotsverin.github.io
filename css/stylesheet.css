@@ -15,14 +15,7 @@ h1{
   font-size: 2.4rem;
 
 }
-.footerText{
-  color: red !important;
-  position: absolute;
-  bottom: 1em;
-  margin: 0;
-  left: 0;
-  right: 0;
-}
+
 #bm {
 
   position: absolute;
@@ -42,11 +35,16 @@ h1{
   right: 0;
 }
 @media (max-width: 520px) {
+    #bmparent{
+    z-index: 100;
+    height: 100%;
+    max-width: 100%;
+    right: 0 !important;
+   
+    
+}
  .rocket{
    width: 100%;
- }
- a{
-   font-size: 10vh;
  }
  footer {
    position: absolute;
@@ -70,52 +68,41 @@ h1{
  }
  #about{
    overflow: hidden;
-  margin: auto;
   top: 0;
   right: 0;
   bottom: 0;
   left:0;
    position: absolute;
-   height: 80vh;
-   width: 80vw;
+   width: 100vw;
    background-color: rgba(35, 35, 35, 0.6);
 
  }
- #about #aboutbm {
-   position: fixed;
 
-      left: 35%;
-      top: 0;
-      right: 0;
-      bottom: 0;
-
-      width: 70%;
-      height: 90%;
-  }
-  #about ul{
+  #about>ul{
     margin: 0;
     position: absolute;
     top:0;
     bottom: 0;
     left: 0;
-    /*background-color: green;*/
-    width: 50%;
-  }
-  #about ul li {
+      padding: 0;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-     margin: 0;
-     position: relative;
-     margin-left: 10px;
-     margin-bottom: 3px;
-   /*  background-color: red;*/
-
-
+          flex-wrap: nowrap;
+    /*background-color: green;*/
+    width: 100%;
   }
+
 
 }
 @media (min-width: 521px) {
+    #bmparent{
+    z-index: 100;
+    height: 100%;
+    max-width: 50%;
+    right: 0 !important;
+   
+    
+}
  .rocket{
    overflow: hidden;
    width: 20%;
@@ -125,26 +112,21 @@ h1{
 
  #about{
   margin: auto;
+  overflow: show;
   top: 0;
   right: 0;
   bottom: 0;
-  left:0;
+  left: 0;
    position: absolute;
    height: 80vh;
    width: 80vw;
    background-color: rgba(35, 35, 35, 0.6);
 
  }
- #about #aboutbm {
-   position: fixed;
-
-      left: 35%;
-      top: 0;
-      right: 0;
-      bottom: 0;
-
-      width: 70%;
-      height: 90%;
+ #aboutbm {
+     right: 2rem;
+      width: 100%;
+      height: 100%;
   }
  footer {
    position: fixed;
@@ -152,7 +134,7 @@ h1{
    margin: 0;
    padding: 0;
    width: 100vw;
-   z-index: 100;
+   
    display: block;
  }
  .footer_li {
@@ -165,29 +147,62 @@ h1{
       position: relative;
       padding: 10px;
  }
- #about ul{
+ #about>ul{
    margin: 0;
    position: absolute;
    top:0;
    bottom: 0;
    left: 0;
-   /*background-color: green;*/
-   width: 50%;
+     height: 100%;
+   width: 100%;
+     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
  }
- #about ul li {
-   display: flex;
-   flex-direction: column;
+ .parent {
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     height: 100%;
    flex-wrap: wrap;
     margin: 0;
-    position: relative;
-    margin-left: 10px;
+     list-style: none;
+     padding: 0;
+    
     margin-bottom: 3px;
   /*  background-color: red;*/
 
 
  }
+    #under{
+        background-color: red;
+    display: block;
+        height: 100%;
+     margin: 0;
+     margin-left: 10px;
+     margin-bottom: 3px;
+        width: 45%;
+        
+    }
 
 }
+#content{
+        position: relative;
+        width: 100%;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        list-style: none;
+        padding: 0 2rem 0;
+}
+
+/*#content li:not(:last-child){
+    position: absolute;
+    margin: 10em 0;
+    background-color: aqua;
+    display: block;
+}*/
+
 a:active{
   text-decoration: line-through !important;
 }
@@ -204,6 +219,7 @@ a:active{
    font-size: 16px;
    line-height: 1.2em;
    font-family: "Roboto", sans-serif;
+width: 40%;
  }
 
 
@@ -217,7 +233,7 @@ a:active{
 
 
 
-#about ul li ul {
+/*#about ul li ul {
   margin: 0;
   position: absolute;
   top: 0;
@@ -225,22 +241,31 @@ a:active{
   bottom: 0;
   left:0;
 
+}*/
+#socialContainer{
+    min-height: 10%;
+    padding: 0;
+    width: 50%;
+    
+    
+    
 }
 .social{
-  font-size: 2.4rem;
-
+padding: 2rem 1em ;
+  display: flex;
 }
-.social {
-
-
+.social>li{
+    display: block;
+    
+    margin: 0 2rem 0;
 }
-.socialIcon{
-  position: absolute;
-  display: inline-flex;
-  flex-direction: row !important;
-  justify-content: center;
-  padding: 1rem;
+
+.under {
+    
+    height: 100%;
+    width:50%;
 }
+
 
 
  /*@media (max-aspect-ratio 375/667){
