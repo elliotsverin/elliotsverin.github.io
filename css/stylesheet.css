@@ -42,8 +42,8 @@ h1{
     max-width: 90%;
         top: 3em;
     left: 5rem !important;
-   
-    
+
+
 }
  .rocket{
    width: 100%;
@@ -102,7 +102,7 @@ h1{
     margin: 0;
      list-style: none;
      padding: 0;
-    
+
     margin-bottom: 3px;
   /*  background-color: red;*/
 
@@ -118,8 +118,8 @@ h1{
     max-width: 60%;
         top: 3em;
     right: 1rem !important;
-   
-    
+
+
 }
  .rocket{
    width: 100%;
@@ -196,8 +196,8 @@ h1{
     height: 100%;
     max-width: 50%;
     right: 0 !important;
-   
-    
+
+
 }
  .rocket{
    overflow: hidden;
@@ -230,7 +230,7 @@ h1{
    margin: 0;
    padding: 0;
    width: 100vw;
-   
+
    display: block;
  }
  .footer_li {
@@ -264,7 +264,7 @@ h1{
     margin: 0;
      list-style: none;
      padding: 0;
-    
+
     margin-bottom: 3px;
   /*  background-color: red;*/
 
@@ -278,7 +278,7 @@ h1{
      margin-left: 10px;
      margin-bottom: 3px;
         width: 45%;
-        
+
     }
 
 }
@@ -346,9 +346,9 @@ width: 40%;
     min-height: 10%;
     padding: 0;
     width: 50%;
-    
-    
-    
+
+
+
 }
 .social{
 padding: 1rem 1em ;
@@ -356,17 +356,26 @@ padding: 1rem 1em ;
 }
 .social>li{
     display: block;
-    
+
     margin: 0 2rem 0;
 }
 
 .under {
-    
+
     height: 100%;
     width:50%;
 }
 
+#work{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(35, 35, 35, 0.6);
 
+}
+#work>iframe{
+    width: 100%;
+    height: 80%;
+}
 
  /*@media (max-aspect-ratio 375/667){
   #body{

@@ -62,14 +62,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
   tl.from(("body"), 3, {
       backgroundColor: "#000000",
       ease: Power1.easeIn
-    })
+    }).fromTo(("#work"), 0.1, {autoAlpha:0}, {autoAlpha:0})
+    .fromTo(("#about"), 0.1, {autoAlpha:0}, {autoAlpha:0})
     .from((".rocket"), 2, {
       autoAlpha: 0,
       x: "-500",
       y: "500",
       left: "40%"
     })
-    .fromTo(("#about"), 0.1, {autoAlpha:0}, {autoAlpha:0})
+
      .staggerFrom((".footer_li"), 0.5, {
        x: "-50",
        backgroundColor: "black",
@@ -98,11 +99,43 @@ document.addEventListener("DOMContentLoaded", function(event) {
 function rollover(){
   //TweenMax.to()
 }
+document.getElementById("myWork").addEventListener("click", work);
 
 document.getElementById("aboutMe").addEventListener("click", about);
 document.ontouchmove = function (e) {
   e.preventDefault();
 }
+function work(){
+  width = window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+
+  height = window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight;
+
+
+  if(home){
+    console.log(homeTest);
+    document.getElementById("myWork").innerHTML="CLOSE";
+    home = false;
+    TweenMax.to((".rocket"), 1.5, {
+      ease: Power1.easeInOut,
+      x: width / 2,
+      y: -height / 1.8,
+      autoAlpha: 0
+    });
+    TweenMax.to(("#work"), 1, {autoAlpha:1});
+  }else{
+    document.getElementById("myWork").innerHTML="WORK";
+    //document.getElementsByClassName("rocket").style.transform = "matrix(1, 0, 0, 1, -500, 500)";
+    TweenMax.to(("#work"), 1, {autoAlpha:0});
+
+    home = true;
+  }
+
+};
+
 function about() {
     console.log(home + " HEJ");
     width = window.innerWidth ||
