@@ -1,6 +1,5 @@
 body{
   background-color: #2131D8;
-  overflow: hidden;
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -66,6 +65,7 @@ h1{
       padding: 10px;
  }
  #about{
+   overflow: hidden;
   margin: auto;
   top: 0;
   right: 0;
@@ -113,6 +113,7 @@ h1{
 }
 @media (min-width: 521px) {
  .rocket{
+   overflow: hidden;
    width: 20%;
    top: 20%;
    right: 20%;

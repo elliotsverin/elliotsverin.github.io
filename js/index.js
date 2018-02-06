@@ -125,14 +125,9 @@ function about() {
       TweenMax.to(("#about"), 1, {autoAlpha:1});
     }else{
       document.getElementById("aboutMe").innerHTML="ABOUT";
-      document.getElementsByClassName("rocket").style.transform = "matrix(1, 0, 0, 1, -500, 500)"; 
+      //document.getElementsByClassName("rocket").style.transform = "matrix(1, 0, 0, 1, -500, 500)";
       TweenMax.to(("#about"), 1, {autoAlpha:0});
-      TweenMax.from((".rocket"), 2, {
-        autoAlpha: 0,
-        x: -(width/2)-500,
-        y: "500",
-        left: "40%"
-      });
+      
       home = true;
     }
 };
