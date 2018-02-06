@@ -1,4 +1,6 @@
 var  tl = new TimelineMax();
+var home = new Boolean(true);
+var homeTest = "WHATUP";
 var width = window.innerWidth ||
   document.documentElement.clientWidth ||
   document.body.clientWidth;
@@ -12,7 +14,7 @@ var height = window.innerHeight ||
 
 //function onDOMLoaded(e) {
 
- console.log("WEMADEIT");
+ console.log(home);
  var anim = bodymovin.loadAnimation({
    container: document.getElementById('aboutbm'),
    renderer: "svg",
@@ -91,27 +93,48 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 });
 
+//document.getElementsByClassName("footer_li").addEventListener("mouseover", rollover);
 
+function rollover(){
+  //TweenMax.to()
+}
 
 document.getElementById("aboutMe").addEventListener("click", about);
 
 function about() {
-  width = window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
+    console.log(home + " HEJ");
+    width = window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
 
-  height = window.innerHeight ||
-    document.documentElement.clientHeight ||
-    document.body.clientHeight;
+    height = window.innerHeight ||
+      document.documentElement.clientHeight ||
+      document.body.clientHeight;
 
 
-  TweenMax.to((".rocket"), 1.5, {
-    ease: Power1.easeInOut,
-    x: width / 2,
-    y: -height / 1.8,
-    autoAlpha: 0
-  });
-  TweenMax.to(("#about"), 1, {autoAlpha:1});
+    if(home){
+      console.log(homeTest);
+      document.getElementById("aboutMe").innerHTML="CLOSE";
+      home = false;
+      TweenMax.to((".rocket"), 1.5, {
+        ease: Power1.easeInOut,
+        x: width / 2,
+        y: -height / 1.8,
+        autoAlpha: 0
+      });
+      TweenMax.to(("#about"), 1, {autoAlpha:1});
+    }else{
+      document.getElementById("aboutMe").innerHTML="ABOUT";
+      document.getElementsByClassName("rocket").style.transform = "matrix(1, 0, 0, 1, -500, 500)"; 
+      TweenMax.to(("#about"), 1, {autoAlpha:0});
+      TweenMax.from((".rocket"), 2, {
+        autoAlpha: 0,
+        x: -(width/2)-500,
+        y: "500",
+        left: "40%"
+      });
+      home = true;
+    }
 };
 
 
