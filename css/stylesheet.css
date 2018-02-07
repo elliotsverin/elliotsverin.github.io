@@ -423,6 +423,7 @@ padding: 1rem 1em ;
     right: 0;
     position: fixed;
     z-index: -30;
+    list-style: none;
 }
 #stars>li{
     padding:0;
