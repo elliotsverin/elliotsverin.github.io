@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     container: document.getElementById('bm2'), // Required
     path: './data.json', // Required
     renderer: 'svg', // Required
-    loop: true, // Optional
+    loop: false, // Optional
     autoplay: true, // Optional
     name: "Hello World", // Name for future reference. Optional.
   });
@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       y: "500",
       left: "40%"
     })
+    .from(("#title"), 0.5, {x: "-50", autoAlpha:0})
 
      .staggerFrom((".footer_li"), 0.5, {
        x: "-50",
@@ -144,12 +145,14 @@ function work(){
     TweenMax.to(("#work"), 1, {autoAlpha:1});
     TweenMax.to(("#bm2"), 1, {autoAlpha:0});
     TweenMax.to(("#about"), 1, {autoAlpha:0});
+    
 
   }else if(document.getElementById("myWork").innerHTML == "CLOSE"){
     document.getElementById("myWork").innerHTML="WORK";
     //document.getElementsByClassName("rocket").style.transform = "matrix(1, 0, 0, 1, -500, 500)";
     TweenMax.to(("#work"), 1, {autoAlpha:0});
     TweenMax.to(("#bm2"), 1, {autoAlpha:1});
+
     document.getElementById("aboutMe").innerHTML="ABOUT";
 
 
