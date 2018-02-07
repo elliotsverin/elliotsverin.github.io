@@ -9,6 +9,12 @@ body{
 #body{
   overflow: hidden;
 }
+#work{
+  display: hidden;
+}
+#about{
+  display: hidden !important;
+}
 h1{
   color: white;
   font-family: 'Rubik', sans-serif;
@@ -135,7 +141,7 @@ background: none !important;
     max-width: 60%;
         top: 0em;
     right: 1rem !important;
-         
+
 
 
 }

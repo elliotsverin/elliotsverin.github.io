@@ -1,5 +1,6 @@
 var  tl = new TimelineMax();
-var home = new Boolean(true);
+
+
 var homeTest = "WHATUP";
 var width = window.innerWidth ||
   document.documentElement.clientWidth ||
@@ -14,7 +15,6 @@ var height = window.innerHeight ||
 
 //function onDOMLoaded(e) {
 
- console.log(home);
  var anim = bodymovin.loadAnimation({
    container: document.getElementById('aboutbm'),
    renderer: "svg",
@@ -35,15 +35,14 @@ var height = window.innerHeight ||
 document.addEventListener("DOMContentLoaded", function(event) {
   tl = new TimelineMax();
 
-  var animation = bodymovin.loadAnimation({
+  var animationMain = bodymovin.loadAnimation({
     container: document.getElementById('bm2'), // Required
-    path: 'data.json', // Required
+    path: './data.json', // Required
     renderer: 'svg', // Required
-    loop: false, // Optional
+    loop: true, // Optional
     autoplay: true, // Optional
     name: "Hello World", // Name for future reference. Optional.
   });
-// animation.addEventListener('complete', stopanim);
 
   var select = function(s) {
       return document.querySelector(s);
@@ -51,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     selectAll = function(s) {
       return document.querySelectorAll(s);
     },
-    animationWindow = select('bm'),
+    animationWindow = select('aboutbm'),
         animData = {
       wrapper: animationWindow,
       animType: 'svg',
@@ -118,9 +117,7 @@ document.ontouchmove = function (e) {
   e.preventDefault();
 }
 
-function stopanim(){
-  animation.stop();
-}
+
 
 function work(){
   width = window.innerWidth ||
@@ -132,10 +129,12 @@ function work(){
     document.body.clientHeight;
 
 
-  if(home){
+  if(document.getElementById("myWork").innerHTML == "WORK"){
     console.log(homeTest);
     document.getElementById("myWork").innerHTML="CLOSE";
-    home = false;
+    document.getElementById("aboutMe").innerHTML="ABOUT";
+
+
     TweenMax.to((".rocket"), 1.5, {
       ease: Power1.easeInOut,
       x: width / 2,
@@ -143,18 +142,24 @@ function work(){
       autoAlpha: 0
     });
     TweenMax.to(("#work"), 1, {autoAlpha:1});
-  }else{
+    TweenMax.to(("#bm2"), 1, {autoAlpha:0});
+    TweenMax.to(("#about"), 1, {autoAlpha:0});
+
+  }else if(document.getElementById("myWork").innerHTML == "CLOSE"){
     document.getElementById("myWork").innerHTML="WORK";
     //document.getElementsByClassName("rocket").style.transform = "matrix(1, 0, 0, 1, -500, 500)";
     TweenMax.to(("#work"), 1, {autoAlpha:0});
+    TweenMax.to(("#bm2"), 1, {autoAlpha:1});
+    document.getElementById("aboutMe").innerHTML="ABOUT";
 
-    home = true;
+
   }
+
 
 };
 
 function about() {
-    console.log(home + " HEJ");
+
     width = window.innerWidth ||
       document.documentElement.clientWidth ||
       document.body.clientWidth;
@@ -164,10 +169,10 @@ function about() {
       document.body.clientHeight;
 
 
-    if(home){
+    if(document.getElementById("aboutMe").innerHTML == "ABOUT"){
       console.log(homeTest);
       document.getElementById("aboutMe").innerHTML="CLOSE";
-      home = false;
+
       TweenMax.to((".rocket"), 1.5, {
         ease: Power1.easeInOut,
         x: width / 2,
@@ -175,12 +180,17 @@ function about() {
         autoAlpha: 0
       });
       TweenMax.to(("#about"), 1, {autoAlpha:1});
-    }else{
+      TweenMax.to(("#work"), 1, {autoAlpha:0});
+      document.getElementById("myWork").innerHTML="WORK";
+
+    }else if(document.getElementById("aboutMe").innerHTML == "CLOSE"){
       document.getElementById("aboutMe").innerHTML="ABOUT";
+      document.getElementById("myWork").innerHTML="WORK";
+
       //document.getElementsByClassName("rocket").style.transform = "matrix(1, 0, 0, 1, -500, 500)";
       TweenMax.to(("#about"), 1, {autoAlpha:0});
+      TweenMax.to(("#bm2"), 1, {autoAlpha:1});
 
-      home = true;
     }
 };
 
