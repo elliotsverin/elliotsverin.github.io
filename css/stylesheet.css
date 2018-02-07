@@ -17,7 +17,9 @@ h1{
 }
 
 #bm2 {
-
+    pointer-events: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='your_transparent.png', sizingMethod='scale');
+background: none !important;
   position: absolute;
     margin: auto;
     top: 0;
@@ -36,6 +38,9 @@ h1{
 }
 @media (max-width: 520px) {
     #bmparent{
+        pointer-events: none;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='your_transparent.png', sizingMethod='scale');
+background: none !important;
         position: fixed;
     z-index: 1;
     height: 100%;
@@ -54,6 +59,7 @@ h1{
    margin: 0;
    padding: 0;
    width: 100vw;
+     padding-bottom: 30px;
  }
 
 
@@ -112,6 +118,9 @@ h1{
 }
 @media (min-width: 521px) and (max-height: 450px){
      #bmparent{
+         pointer-events: none;
+         filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='your_transparent.png', sizingMethod='scale');
+background: none !important;
         position: fixed;
     z-index: 1;
     height: 100%;
@@ -142,7 +151,8 @@ h1{
      list-style: none;
       margin: 0;
       position: relative;
-      padding: 10px;
+      padding-bottom: 30px;
+     padding-left: 10px;
  }
     .footer_li{
         padding: 0 2rem 0;
@@ -155,10 +165,13 @@ h1{
   left:0;
    position: absolute;
    width: 100vw;
-     height: 100;
+     height: 100vh;
    background-color: rgba(35, 35, 35, 0.6);
 
  }
+     h1{
+        margin-bottom: 0px;
+    }
 
   #about>ul{
     margin: 0;
@@ -186,12 +199,18 @@ h1{
 
 
  }
+    footer{
+        padding-bottom: 20px;
+    }
 }
 @media (min-width: 521px)  and (min-height: 450px) {
     #content{
         top:25%;
     }
     #bmparent{
+        pointer-events: none;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='your_transparent.png', sizingMethod='scale');
+background: none !important;
     z-index: 1;
     height: 100%;
     max-width: 50%;
@@ -199,6 +218,7 @@ h1{
 
 
 }
+
  .rocket{
    overflow: hidden;
    width: 20%;
