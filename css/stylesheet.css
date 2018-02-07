@@ -389,7 +389,7 @@ padding: 1rem 1em ;
 }
 .social>li{
     display: block;
-
+    z-index: 5;
     margin: 0 2rem 0;
 }
 
