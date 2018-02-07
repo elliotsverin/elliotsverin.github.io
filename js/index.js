@@ -35,6 +35,16 @@ var height = window.innerHeight ||
 document.addEventListener("DOMContentLoaded", function(event) {
   tl = new TimelineMax();
 
+  var animation = bodymovin.loadAnimation({
+    container: document.getElementById('bm2'), // Required
+    path: 'data.json', // Required
+    renderer: 'svg', // Required
+    loop: false, // Optional
+    autoplay: true, // Optional
+    name: "Hello World", // Name for future reference. Optional.
+  });
+// animation.addEventListener('complete', stopanim);
+
   var select = function(s) {
       return document.querySelector(s);
     },
@@ -59,11 +69,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   anim.setSpeed(1);
 
 
-  tl.from(("body"), 3, {
+  tl.to(("#cover"), 0.1, {autoAlpha:0})
+  .from(("body"), 3, {
       backgroundColor: "#000000",
       ease: Power1.easeIn
     }).fromTo(("#work"), 0.1, {autoAlpha:0}, {autoAlpha:0})
     .fromTo(("#about"), 0.1, {autoAlpha:0}, {autoAlpha:0})
+    .staggerFrom(("#stars"), 0.5, {y: "-50", autoAlpha: 0}, 0.1)
     .from((".rocket"), 2, {
       autoAlpha: 0,
       x: "-500",
@@ -105,6 +117,11 @@ document.getElementById("aboutMe").addEventListener("click", about);
 document.ontouchmove = function (e) {
   e.preventDefault();
 }
+
+function stopanim(){
+  animation.stop();
+}
+
 function work(){
   width = window.innerWidth ||
     document.documentElement.clientWidth ||
