@@ -37,6 +37,10 @@ background: none !important;
   right: 0;
 }
 @media (max-width: 520px) {
+    .social>li{
+
+        padding-top: 30px;
+}
     #bmparent{
         pointer-events: none;
         filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='your_transparent.png', sizingMethod='scale');
@@ -125,8 +129,9 @@ background: none !important;
     z-index: 1;
     height: 100%;
     max-width: 60%;
-        top: 3em;
+        top: 0em;
     right: 1rem !important;
+         
 
 
 }
