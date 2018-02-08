@@ -78,8 +78,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     .from((".rocket"), 2, {
       autoAlpha: 0,
       x: "-500",
-      y: "500",
-      left: "40%"
+      y: "500"
     })
     .from(("#title"), 0.5, {x: "-50", autoAlpha:0})
 
@@ -145,11 +144,17 @@ function work(){
     TweenMax.to(("#work"), 1, {autoAlpha:1});
     TweenMax.to(("#bm2"), 1, {autoAlpha:0});
     TweenMax.to(("#about"), 1, {autoAlpha:0});
-    
+
 
   }else if(document.getElementById("myWork").innerHTML == "CLOSE"){
     document.getElementById("myWork").innerHTML="WORK";
     //document.getElementsByClassName("rocket").style.transform = "matrix(1, 0, 0, 1, -500, 500)";
+    TweenMax.to((".rocket"), 1.5, {
+      ease: Power1.easeInOut,
+      x: width / 2,
+      y: -height / 1.8,
+      autoAlpha: 1
+    });
     TweenMax.to(("#work"), 1, {autoAlpha:0});
     TweenMax.to(("#bm2"), 1, {autoAlpha:1});
 
