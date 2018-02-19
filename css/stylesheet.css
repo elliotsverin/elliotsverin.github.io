@@ -142,16 +142,17 @@ h1{
 #socialContainer{
     min-height: 10%;
     padding: 0;
+    left: 0;
     width: 50%;
 }
 .social{
-    padding: 1rem 1em ;
+    padding: 1rem 0.5em ;
     display: flex;
 }
 .social>li{
     display: block;
     z-index: 5;
-    margin: 0 2rem 0;
+    margin: 1rem 6rem 0 0;
 }
 
 /*MEDIAQUERIES*/
@@ -229,7 +230,7 @@ h1{
         top: 3em;
         left: 5rem !important;
     }
-    #socialContainer{margin-left: 50px}
+
     .social>li{padding-top: 30px}
 
 
